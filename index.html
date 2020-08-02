@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>Qing-Q Remix Blog</title>
+  <meta name="author" content="Remix">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Qing-Q Remix Blog"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Qing-Q Remix Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives(档案)
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories(分类)
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags(标签)
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About(关于)
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 <div class="page-header logo">
+  <h1>天地转，光阴迫。<span class="blink-fast">|</span></h1>
+</div>
+
+<div class="row page">
+
+	
+	<div class="col-md-9">
+	
+
+		<div class="slogan">
+
+
+		<i class="fa fa-heart blink-slow"></i>
+
+		wubba lubba dub dub.
+
+</div>    
+
+		<div id="top_search"></div>
+		<div class="mypage">
+		
+		<!-- title and entry -->
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/08/01/Kali下的蓝牙设备侦察方法介绍/" >Kali下的蓝牙设备侦察方法介绍</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-08-01  </div>
+		</div>
+	</div>
+	
+
+
+			<!--
+<div class="entry">
+  <div class="row">
+	
+	
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=28850516&auto=1&height=66"></iframe>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着蓝牙技术的不断普及发展，蓝牙已然成为了许多设备不可或缺的功能。如今的手机和平板电脑几乎都已具备了蓝牙的功能。但在为我们带来极大方便的同时，蓝牙也成正成为一个泄露我们隐私数据的切入口！一旦黑客破解了我们的蓝牙连接，那么我们存储在手机上的大量隐私数据将会被黑客毫无保留的窃取走。</p>
+<p>当然，黑客想要窃取走我们的数据也并非易事。我们都知道蓝牙协议的最小范围为10米，因此黑客必须要在有效范围内才可能对目标发起攻击。但也别高兴的太早，实际上黑客可以通过一些适配器将它的有效距离延长至100米，这个距离足以让他们对例如咖啡厅，办公室甚至是邻居家的蓝牙设备发起攻击。</p>
+<p>侦察的重要性</p>
+<p>像所有的攻击一样，无论是基于计算机还是军事野战，侦察都是至关重要的。没有良好的侦察基础，你的成功几率将大大降低，甚至在某些情况下直接已失败告终。任何情况下，对目标了解越多，你的成功几率则越大。因此，在本教程中我将向你展示几种对潜在目标进行侦察的方法。</p>
+<p>如果你对蓝牙术语，技术和安全并不太了解，那么我强烈建议你在继续阅读下面的内容之前，去做个基本的了解学习。例如MultiBlue Dongle，一种专门用于黑客入侵蓝牙的工具。此外本文还有一大亮点，在本文中我们将为大家展示Mr. Robot中Elliot是如何入侵监并狱释放囚犯的。</p>
+<p>使用Bluez进行蓝牙侦察</p>
+<p>BlueZ是几乎所有Linux版本的默认蓝牙协议栈，包括在Debian上构建的Kali Linux。如今，BlueZ也成为了Mac OS X和Android上的默认蓝牙协议栈。</p>
+<p>蓝牙协议的这种实现有许多内置的工具，我们可以将其用于侦察，并且由于它们几乎适用于所有Linux的版本，因此任何人几乎都可以使用它们。（我们也会在Kali中使用一些专门的蓝牙侦察工具。）</p>
+	
+
+	</div>
+  <a type="button" href="/2020/08/01/Kali下的蓝牙设备侦察方法介绍/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+-->
+<div class="entry">
+  <div class="row">
+	
+	
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=28850516&auto=1&height=66"></iframe>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着蓝牙技术的不断普及发展，蓝牙已然成为了许多设备不可或缺的功能。如今的手机和平板电脑几乎都已具备了蓝牙的功能。但在为我们带来极大方便的同时，蓝牙也成正成为一个泄露我们隐私数据的切入口！一旦黑客破解了我们的蓝牙连接，那么我们存储在手机上的大量隐私数据将会被黑客毫无保留的窃取走。</p>
+<p>当然，黑客想要窃取走我们的数据也并非易事。我们都知道蓝牙协议的最小范围为10米，因此黑客必须要在有效范围内才可能对目标发起攻击。但也别高兴的太早，实际上黑客可以通过一些适配器将它的有效距离延长至100米，这个距离足以让他们对例如咖啡厅，办公室甚至是邻居家的蓝牙设备发起攻击。</p>
+<p>侦察的重要性</p>
+<p>像所有的攻击一样，无论是基于计算机还是军事野战，侦察都是至关重要的。没有良好的侦察基础，你的成功几率将大大降低，甚至在某些情况下直接已失败告终。任何情况下，对目标了解越多，你的成功几率则越大。因此，在本教程中我将向你展示几种对潜在目标进行侦察的方法。</p>
+<p>如果你对蓝牙术语，技术和安全并不太了解，那么我强烈建议你在继续阅读下面的内容之前，去做个基本的了解学习。例如MultiBlue Dongle，一种专门用于黑客入侵蓝牙的工具。此外本文还有一大亮点，在本文中我们将为大家展示Mr. Robot中Elliot是如何入侵监并狱释放囚犯的。</p>
+<p>使用Bluez进行蓝牙侦察</p>
+<p>BlueZ是几乎所有Linux版本的默认蓝牙协议栈，包括在Debian上构建的Kali Linux。如今，BlueZ也成为了Mac OS X和Android上的默认蓝牙协议栈。</p>
+<p>蓝牙协议的这种实现有许多内置的工具，我们可以将其用于侦察，并且由于它们几乎适用于所有Linux的版本，因此任何人几乎都可以使用它们。（我们也会在Kali中使用一些专门的蓝牙侦察工具。）</p>
+	
+	</div>
+  <a type="button" href="/2020/08/01/Kali下的蓝牙设备侦察方法介绍/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+
+		</div>
+
+		<!-- pagination -->
+		<div>
+  		<center>
+		<div class="pagination">
+
+   
+</div>
+
+  		</center>
+		</div>
+
+		
+		
+	</div> <!-- col-md-9 -->
+
+	
+		<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+	<div class="widget">
+		<h4>分类</h4>
+		<ul class="tag_box inline list-unstyled">
+		
+			<li><a href="/categories/无线渗透/">无线渗透<span>1</span></a></li>
+		
+		</ul>
+	</div>
+
+		
+			
+	<div class="widget">
+		<h4>标签云</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/蓝牙/">蓝牙<span>1</span></a></li>
+		
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>最新文章</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2020/08/01/Kali下的蓝牙设备侦察方法介绍/" ><i class="fa fa-file-o"></i>Kali下的蓝牙设备侦察方法介绍</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>链接</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="false"></i><a href="" title="" target="_blank"]);">link1</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+	
+	
+</div> <!-- row-fluid -->
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  
+  &copy; 2020 Remix's Blog
+  
+      powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.Theme <a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" target="_blank">freemind.bithack</a>  
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
